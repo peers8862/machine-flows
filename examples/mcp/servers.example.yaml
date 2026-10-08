@@ -1,0 +1,22 @@
+# Example MCP manifest: copy to mcp/servers.yaml. Definitions only.
+# NEVER put a secret value here. Reference credentials by environment-variable NAME or by a helper command that prints them at connect time.
+version: 1
+
+tools:
+  claude: {file: "~/.claude.json (user scope)", format: json}
+  codex:  {file: "~/.codex/config.toml [mcp_servers.<name>]", format: toml}
+  cursor: {file: "~/.cursor/mcp.json", format: json}
+
+servers:
+  github:
+    purpose: pull requests, issues, labels
+    transport: http
+    url: https://api.githubcopilot.com/mcp/
+    auth: bearer from helper        # mcp/helpers/github-auth-headers.sh prints the header from `gh auth token`
+    platforms: [linux, macos]
+  docs-example:
+    purpose: library documentation lookup
+    transport: stdio
+    command: npx -y example-docs-mcp@latest
+    env_names: [EXAMPLE_API_KEY]    # names only; the value is set in the shell or a per-machine, unsynced file
+    platforms: [linux, macos]

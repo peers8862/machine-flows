@@ -1,0 +1,73 @@
+/*
+# machine-flows public repo: a WHITELIST. Everything is ignored first; only generic, shareable paths are un-ignored below.
+# Personal areas (inventory/, files/, service-settings/, service-memories/, drafts/, plans/ except examples, ai-tools/, mcp manifests,
+# machine instruction files) stay local; examples/ shows their layout with placeholder data.
+
+!/.gitignore
+!/README.md
+!/SETUP.md
+!/AGENTS.md
+!/examples/
+
+# scripts/: only the generic helper
+!/scripts/
+/scripts/*
+!/scripts/cli-names-check.sh
+
+# mcp/: only the credential-free helper (the manifest and dry-run outputs name hosts and accounts)
+!/mcp/
+/mcp/*
+!/mcp/helpers/
+/mcp/helpers/*
+!/mcp/helpers/github-auth-headers.sh
+
+# ai-authored/: only the generic prompt-document templates
+!/ai-authored/
+/ai-authored/*
+!/ai-authored/templates/
+/ai-authored/templates/*
+!/ai-authored/templates/flow-request.md
+!/ai-authored/templates/research-brief.md
+!/ai-authored/templates/role-change.md
+!/ai-authored/templates/subsystem-setup.md
+!/ai-authored/templates/task-brief.md
+!/ai-authored/templates/unit-setup.md
+
+# subsystems/: only the blank template (real manifests such as subsystems/<id>/ stay local)
+!/subsystems/
+/subsystems/*
+!/subsystems/_template/
+
+# never committed, wherever they sit
+/mach/
+.stfolder/
+.stversions/
+.stignore
+.stglobalignore
+/staging/
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+*.log
+logs/
+.DS_Store
+*.xlsx
+*.env
+.env*
+*.pem
+*.p12
+*token*
+*secret*
+*.local.*
+id_rsa*
+id_ed25519*
+credentials*.json
+
+# the one placeholder-only file whose name matches the secret patterns above
+!/examples/secrets.toml.example
+
+# templates whose comments name personal machine labels (kept local)
+/ai-authored/templates/flow-request.md
+/ai-authored/templates/research-brief.md
+/ai-authored/templates/task-brief.md
