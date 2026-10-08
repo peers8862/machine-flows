@@ -13,7 +13,7 @@ How to use machine-flows from each AI tool, and how git fits with a Syncthing-sy
 
 ## Install mach (optional)
 
-`mach` is a separate repository, [peers8862/mach](https://github.com/peers8862/mach), expected at `~/machine-flows/mach/`. (It may be private: cloning then needs the owner's GitHub access.) Cloning a repository is an outward network action, so **an agent may clone it only when the user explicitly says so**:
+`mach` is a separate repository, [peers8862/mach](https://github.com/peers8862/mach), expected at `~/machine-flows/mach/`. Cloning a repository is an outward network action, so **an agent may clone it only when the user explicitly says so**:
 
 ```bash
 git clone https://github.com/peers8862/mach ~/machine-flows/mach
