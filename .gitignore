@@ -38,6 +38,19 @@
 /subsystems/*
 !/subsystems/_template/
 
+# model router: generic ladder only. Keys are environment-variable names, never values.
+!/models.toml
+!/model_router/
+/model_router/*
+!/model_router/__init__.py
+!/model_router/__main__.py
+!/model_router/router.py
+!/model_router/tomlutil.py
+!/model_router/transport.py
+!/tests/
+/tests/*
+!/tests/test_model_router.py
+
 # never committed, wherever they sit
 /mach/
 .stfolder/

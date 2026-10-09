@@ -21,6 +21,7 @@ This repository is the **public, generic part**. The real folder also holds pers
 | `service-memories/` | Lessons and per-service memory (the lessons index, reviews) | Local only (see `examples/service-memories/`) |
 | `service-settings/` | Shared settings per service (for example `mach/config.toml`) | Local only (see `examples/service-settings/`) |
 | `subsystems/` | One TOML manifest per company or project: units, roles, repos, service profiles | Only `_template/` (see `examples/subsystem.toml`) |
+| `models.toml`, `model_router/` | Capability ladder for completions: task class, provider fallback, daily USD budget | Yes |
 
 "Local only" folders are excluded by the whitelist in `.gitignore`: it starts with `/*` and un-ignores generic paths one by one. A new file is never committed by accident; to publish something you add a line for it.
 
@@ -35,6 +36,8 @@ This repository is the **public, generic part**. The real folder also holds pers
 **Plans.** `plans/` holds one living document per topic, numbered `NN-short-name.md`. Each has a `Status:` line, short prose, then checklists. Boxes are ticked only when verified, facts carry a date and a source, and a plan is archived to `plans/archived/` only when every box is ticked and the owner agrees. Plan `00` is the master plan and is never archived. The full convention is in [`examples/plans/README.md`](examples/plans/README.md).
 
 **Subsystems.** A subsystem names a company or project and its units (pillars, services, products, pipelines). A TOML manifest per subsystem records who leads each unit (an AI tool, a Grok Bot or the owner) so `mach <subsystem> <unit> "prompt"` can route a prompt. Start from [`examples/subsystem.toml`](examples/subsystem.toml).
+
+**Model router.** Completions go through `model_router` and `models.toml`. A caller passes a task class (`triage`, `extraction`, `synthesis`, `reasoning`, `chat`, `code`); the router chooses the provider. Model ids live in that file, not in code. Daily USD caps are per subsystem; local and free tiers do not count. Preview a choice with `python3 -m model_router --class triage --channel cli --subsystem demo --dry-run`.
 
 ## Where to start
 
