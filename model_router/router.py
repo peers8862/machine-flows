@@ -1,6 +1,6 @@
 """Route a completion by task class, then fall back and account for spend.
 
-The proposal bundle named in NIA-116 was not available. This follows the issue:
+The router proposal was not available. This follows that proposal:
 ordered tiers, per-class ladders, rotation on 401/402/429/5xx, a daily USD cap
 per subsystem (local and free exempt, batch at half price), iMessage sticky
 escalation, and an unrestricted CLI. Interactive failure says the strong model

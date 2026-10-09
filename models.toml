@@ -1,8 +1,8 @@
-# Capability ladder for mach completions (NIA-116).
+# Capability ladder for mach completions.
 #
-# The proposal bundle 2026-10-08-model-router (models.toml draft + LADDER.md)
-# was not in this repository, peers8862/mach, niagaraassembly/na-research,
-# Linear, Google Drive, Slack, or Gmail on 2026-10-09. Field names here are
+# The router proposal (a models.toml draft and ladder notes)
+# was not available when this file was written.
+# Field names here are
 # the minimum that implements the issue text. They are not a copy of that draft.
 # Model ids are placeholders (`example-*`). usd_per_call figures on paid tiers
 # are placeholders so a daily cap has a number to compare; replace both when
