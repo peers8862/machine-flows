@@ -18,6 +18,7 @@ For Codex, ChatGPT, Cursor and any other agent. The long-form shared instruction
 - Plans in `plans/` are living documents (see `examples/plans/README.md`): update in place, tick boxes only when verified, never renumber.
 - Tracking tables are sheet sets: edit the CSVs, regenerate the workbook with `mach sheets build <dir>`, never edit the workbook.
 - Check runtime versions (`node -v`, `python3 -V`) instead of assuming them.
+- Scheduled jobs and app automations (cron, systemd timers, Codex or Claude schedules): record them in `inventory/<host>/76-custom-scheduled-jobs.md` in the same task. Full rule: `inventory/README.md`.
 
 ## Where things are
 
