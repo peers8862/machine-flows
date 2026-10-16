@@ -1,5 +1,9 @@
 # machine-flows
 
+Project initiated by [@peers8862](https://github.com/peers8862).
+
+> **Archived 2026-10-16.** This repository is no longer updated. How the folder model works is described in [this write-up](https://gist.github.com/peers8862/c4f9a79421ebe5af3ebb39f313bcaa3f); a maintained public version will be published separately.
+
 machine-flows is a folder that several computers share through [Syncthing](https://syncthing.net/), and that AI tools (Claude Code, Codex, Cursor, ChatGPT and others) read and write. It holds the things that should be the same everywhere: shared AI instructions, plans, prompt templates, MCP server definitions, inventories of each machine, and a small CLI called [`mach`](https://github.com/peers8862/mach) that works on all of it.
 
 This repository is the **public, generic part**. The real folder also holds personal inventories, settings, notes and project plans; those stay local and are described by stubs in [`examples/`](examples/).
